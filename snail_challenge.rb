@@ -37,6 +37,7 @@ class Snail
   end
 
   def snailitize
+    # add the first array to the answer array
     @matrix.count.times do |i|
       if @hash[i] != nil
         @hash[i].each {|num| @answer << num}
@@ -44,6 +45,7 @@ class Snail
       end
       @counter3 += 1
 
+    # add the last elements of the middle arrays to the answer array
       (@matrix_length - @counter3).times do |x|
         if @hash[x+i+1] != nil
           @answer << @hash[x+i+1].last
@@ -51,10 +53,12 @@ class Snail
         end
       end
 
+      # add the last array in total to the answer array (reversed)
       @hash[@matrix_length-i].reverse.each {|num| @answer << num} if @hash[@matrix_length-i] != nil
       @hash.delete(@matrix_length-i)
       @counter += 1
 
+    # add the first elements of the middle arrays to the answer array
       (@matrix_length - @counter).times do |x|
         if @hash[(@matrix_length-(x+i+1))] != nil
           @answer << @hash[(@matrix_length-(x+i+1))].first
