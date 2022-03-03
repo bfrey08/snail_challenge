@@ -24,44 +24,6 @@ require 'pry'
 # write a loop that follows a pattern with the caviat of not hitting a previous position
 
 
-# class Snail
-#
-#   def initialize(matrix)
-#     @matrix = matrix
-#     @answer = []
-#     @position_coordinate = []
-#     @counter = 0
-#     @counter2 = 0
-#   end
-#
-#   def snailitize
-#     @position_coordinate = @matrix.flatten.map do |num|
-#       @counter2
-#       @counter2 += 1
-#     end
-#
-#     @matrix.each do |n|
-#
-#       @answer << n.delete_at(@matrix[@position_coordinate.first][@position_coordinate.second])
-#
-#
-#       @counter + 1
-#     end
-#     #matrix - position_array = wip_array
-#
-#     @answer << @matrix.first
-#
-#   end
-#
-#
-#
-#
-#
-#
-#
-#
-# end
-
 class Snail
 
   def initialize(matrix)
